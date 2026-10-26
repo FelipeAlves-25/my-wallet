@@ -1,0 +1,19 @@
+[project]
+name = "my-wallet"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "FelipeAlves-25", email = "felipefas209@outlook.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "fastapi[standard]>=0.143.3",
+]
+
+[project.scripts]
+my-wallet = "my_wallet:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"

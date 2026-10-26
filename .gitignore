@@ -1,1 +1,16 @@
+# Ambientes virtuais
+/.venv
+/venv
+/.env
+/.env
+
+# Caches
+*/__pycache__
+*.swp
+*.swo
+
+# IDEs
 /.vscode
+
+# Outros
+/NOTES.md
