@@ -1,16 +1,13 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-
-from jinja2 import Environment, FileSystemLoader, select_autoescape
-
-html_env = Environment(
-    loader=FileSystemLoader("./public"),
-    autoescape=select_autoescape
-)
+from ui.renderer import render
 
 app = FastAPI()
 
-@app.get("/")
-async def read_root():
-    mainpage = html_env.get_template("index.html")
-    return HTMLResponse(content=mainpage, status_code=200)
+@app.get("/", response_class=HTMLResponse)
+def read_root():
+    return render("index.html")
+
+@app.get("/favicon.ico")
+def favicon():
+    pass
