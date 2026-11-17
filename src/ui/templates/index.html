@@ -5,9 +5,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>My Wallet</title>
-        <link rel="stylesheet" src="src/ui/styles/style.css">
+        <link rel="stylesheet" href="{{ url_for('assets', path='style.css') }}">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container">
+            <header>
+                <h1 class="page-title">My Wallet</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="">Início</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h2>Suas finanças em um só lugar</h2>
+                <p>Com a My Wallet, você pode gerenciar seus gastos, acompanhar seus investimentos, receber relatórios e diagnósticos que pode salvar sua saúde financeira com apenas alguns cliques!</p>
+                <button>Crie sua conta</button>
+                <button>Entrar</button>
+            </main>
+        </div>
     </body>
 </html>
